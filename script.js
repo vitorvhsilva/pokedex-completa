@@ -1,7 +1,5 @@
 const pokeContainer = document.querySelector('#poke-container')
 
-const pokemonCount = 150;
-
 const getPokemonsCount = async () => {
   const url = `https://pokeapi.co/api/v2/pokemon/`
   const res = await fetch(url)
@@ -29,6 +27,7 @@ const colors = {
 const mainTypes = Object.keys(colors)
 
 const fetchPokemons = async () => {
+  let pokemonCount = await getPokemonsCount()
   for (let index = 1; index <= pokemonCount; index++) {
     await getPokemons(index)
   }
