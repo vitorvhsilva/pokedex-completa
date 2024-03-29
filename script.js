@@ -1,6 +1,6 @@
 const pokeContainer = document.querySelector('#poke-container')
 
-const pokemonCount = 1000;
+const pokemonCount = 150;
 
 const getPokemonsCount = async () => {
   const url = `https://pokeapi.co/api/v2/pokemon/`
